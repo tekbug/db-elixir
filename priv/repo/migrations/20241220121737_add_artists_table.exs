@@ -7,7 +7,7 @@ defmodule Database.Repo.Migrations.AddArtistsTable do
       add :birth_date, :date, null: true
       add :death_date, :date, null: true
 
-      timestamps null: true
+      timestamps()
     end
 
     create index(:artists, :name)

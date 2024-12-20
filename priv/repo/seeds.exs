@@ -1,4 +1,3 @@
-
 alias Database.Repo
 alias Database.{Artist, Album, Track, Genre, AlbumWithEmbeds, ArtistEmbed, TrackEmbed}
 
@@ -218,8 +217,7 @@ Repo.insert! %Artist{
   ]
 }
 
-if Repo.using_postgres?() do
-  Repo.insert! %AlbumWithEmbeds{
+Repo.insert! %AlbumWithEmbeds{
     title: "Moanin'",
     artist: %ArtistEmbed{
       name: "Art Blakey"
@@ -251,7 +249,6 @@ if Repo.using_postgres?() do
       }
     ]
   }
-end
 
 IO.puts ""
 IO.puts "Success! Sample data has been added."
