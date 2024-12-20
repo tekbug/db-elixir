@@ -5,6 +5,7 @@ defmodule Database.Track do
     field :title, :string
     field :duration, :decimal
     field :duration_string, :string, virtual: true
+    field :index, :integer
     field :number_of_plays, :integer
     timestamps()
 
